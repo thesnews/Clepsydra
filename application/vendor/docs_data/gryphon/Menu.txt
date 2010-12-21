@@ -1,0 +1,134 @@
+Format: 1.4
+
+
+Title: Gryphon 3.0
+
+# You can also add a sub-title to your menu like this:
+# SubTitle: [subtitle]
+
+Footer: (c) 2010 The State News
+Timestamp: Last updated mon day
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+Group: Controller  {
+
+   File: controller\article  (controller/article.class.php)
+   File: controller\author  (controller/author.class.php)
+   File: controller\blog  (controller/blog.class.php)
+   File: controller\comment  (controller/comment.class.php)
+   File: controller\gallery  (controller/gallery.class.php)
+   File: controller\mail  (controller/mail.class.php)
+   File: controller\main  (controller/main.class.php)
+   File: controller\media  (controller/media.class.php)
+   File: controller\multimedia  (controller/multimedia.class.php)
+   File: controller\page  (controller/page.class.php)
+   File: controller\recent  (controller/recent.class.php)
+   File: controller\search  (controller/search.class.php)
+   File: controller\section  (controller/section.class.php)
+   File: controller\shorten  (controller/shorten.class.php)
+   }  # Group: Controller
+
+Group: Model  {
+
+   File: model/article  (model/article.class.php)
+   File: model/author  (model/author.class.php)
+   File: model/bannedAddress  (model/bannedAddress.class.php)
+   File: model/bannedEmail  (model/bannedEmail.class.php)
+   File: model/bannedName  (model/bannedName.class.php)
+   File: model/blog  (model/blog.class.php)
+   File: model/blogPost  (model/blogPost.class.php)
+   File: model/comment  (model/comment.class.php)
+   File: model/gallery  (model/gallery.class.php)
+   File: model/media  (model/media.class.php)
+   File: model/page  (model/page.class.php)
+   File: model/responder  (model/responder.class.php)
+   File: model/section  (model/section.class.php)
+   File: model/tag  (model/tag.class.php)
+   File: model/turingQuestion  (model/turingQuestion.class.php)
+   File: model\blockedRecipient  (model/blockedRecipient.class.php)
+   File: model\plugin  (model/plugin.class.php)
+   File: model\sentMessage  (model/sentMessage.class.php)
+   File: model\shortUrl  (model/shortUrl.class.php)
+   }  # Group: Model
+
+Group: Adapter  {
+
+   File: adapter\adapter  (adapter/adapter.class.php)
+   File: adapter\adapterInterface  (adapter/adapter.interface.php)
+   File: adapter\audio  (adapter/audio.class.php)
+   File: adapter\enterprise  (adapter/enterprise.class.php)
+   File: adapter\flash  (adapter/flash.class.php)
+   File: adapter\image  (adapter/image.class.php)
+   File: adapter\pdf  (adapter/pdf.class.php)
+   File: adapter\soundSlide  (adapter/soundSlide.class.php)
+   File: adapter\video  (adapter/video.class.php)
+   File: adapter\yaml  (adapter/yaml.class.php)
+   }  # Group: Adapter
+
+File: helper\comment  (helper/comment.class.php)
+
+Group: Search  {
+
+   File: search/indexerWorker  (search/indexerWorker.class.php)
+   File: search\index  (search/index.class.php)
+   File: search\indexer  (search/indexer.class.php)
+   File: search\paginator  (search/paginator.class.php)
+   }  # Group: Search
+
+File: helper\utility  (helper/utility.class.php)
+
+Group: Middleware  {
+
+   File: middleware\basic  (middleware/basic.class.php)
+   File: middleware\comment\basic  (middleware/comment/basic.class.php)
+   File: middleware\email  (middleware/email.class.php)
+   }  # Group: Middleware
+
+File: scripts\indexer  (scripts/indexer.php)
+
+Group: Lib  {
+
+   File: lib\spam  (lib/spam.class.php)
+   File: lib\turing  (lib/turing.class.php)
+   File: lib\utility  (lib/utility.class.php)
+   }  # Group: Lib
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   File Index: Files
+   Function Index: Functions
+   Interface Index: Interfaces
+   }  # Group: Index
+

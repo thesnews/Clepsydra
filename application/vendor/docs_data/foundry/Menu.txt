@@ -1,0 +1,214 @@
+Format: 1.4
+
+
+Title: Foundry 6
+
+# You can also add a sub-title to your menu like this:
+# SubTitle: [subtitle]
+
+Footer: (c) 2010, The State News
+Timestamp: Last updated mon day
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+File: <# subns #>\<# name #>  (templates/model.template.php)
+File: <# subns #>\<# name #>  (templates/controller.template.php)
+
+Group: View  {
+
+   File: default  (view/default.view.php)
+   File: helper  (view/helper.class.php)
+
+   Group: Helper  {
+
+      File: helper\calendar  (view/helper/calendar.class.php)
+      File: helper\calendarDay  (view/helper/calendarDay.class.php)
+      File: helper\calendarWeek  (view/helper/calendarWeek.class.php)
+      }  # Group: Helper
+
+   File: template  (view/template.class.php)
+
+   Group: Twig  {
+
+      File: fetch  (view/twig/fetch.class.php)
+      File: fetchNode  (view/twig/fetchNode.class.php)
+      File: helper  (view/twig/helper.class.php)
+      File: helperNode  (view/twig/helperNode.class.php)
+      File: modelHandler  (view/twig/modelHandler.class.php)
+      File: twig  (view/twig/twig.class.php)
+      }  # Group: Twig
+
+   File: view  (view/view.class.php)
+   }  # Group: View
+
+File: cache  (cache/cache.class.php)
+File: cacheLite  (cache/driver/cacheLite.class.php)
+
+Group: Auth  {
+
+   Group: Middleware  {
+
+      File: basic  (auth/middleware/basic.class.php)
+      }  # Group: Middleware
+
+   File: session  (auth/session.class.php)
+   File: utility  (auth/utility.class.php)
+   }  # Group: Auth
+
+File: cli  (cli.class.php)
+
+Group: Cli  {
+
+   File: optionParser  (cli/optionParser.class.php)
+   }  # Group: Cli
+
+Group: Config  {
+
+   File: cache  (config/cache.class.php)
+   File: config  (config/config.class.php)
+   }  # Group: Config
+
+File: controller  (controller.class.php)
+
+Group: Curl  {
+
+   File: exception  (curl/exception.class.php)
+   File: http  (curl/http.class.php)
+   }  # Group: Curl
+
+Group: Db  {
+
+   File: db  (db/db.class.php)
+   File: pdo  (db/pdo.class.php)
+   }  # Group: Db
+
+File: event  (event.class.php)
+
+Group: Exception  {
+
+   File: exception  (exception/db.class.php)
+   File: exception  (exception/halt.class.php)
+   File: exception  (exception/model.class.php)
+   File: exception  (exception/exception.class.php)
+   File: exception  (exception/auth.class.php)
+   File: exception  (exception/view.class.php)
+   File: exception  (exception/queue.class.php)
+   }  # Group: Exception
+
+Group: Filter  {
+
+   File: filter  (filter/filter.class.php)
+   }  # Group: Filter
+
+File: foundry  (foundry.class.php)
+File: job  (queue/job.class.php)
+File: log.class.php  (log.class.php)
+File: mailer.class.php  (job/mailer.class.php)
+
+Group: Fs  {
+
+   File: bucket  (fs/bucket.class.php)
+   File: directory  (fs/directory.class.php)
+   File: file  (fs/file.class.php)
+   File: path  (fs/path.class.php)
+   File: zip.class.php  (fs/zip.class.php)
+   }  # Group: Fs
+
+Group: Http  {
+
+   File: http  (http/client.class.php)
+   }  # Group: Http
+
+Group: Middleware  {
+
+   File: common  (middleware/common.class.php)
+   File: interface  (middleware/interface.class.php)
+   File: middleware  (middleware/middleware.class.php)
+   }  # Group: Middleware
+
+Group: Model  {
+
+   File: collection  (model/collection.class.php)
+   File: generic  (model/generic.class.php)
+   File: inflector  (model/inflector.class.php)
+   File: model  (model/model.class.php)
+   File: paginator.class.php  (model/paginator.class.php)
+
+   Group: Serializers  {
+
+      File: atom.class.php  (model/serializers/atom.class.php)
+      File: json  (model/serializers/json.class.php)
+      File: podcast.class.php  (model/serializers/podcast.class.php)
+      File: rss.class.php  (model/serializers/rss.class.php)
+      File: yaml  (model/serializers/yaml.class.php)
+      }  # Group: Serializers
+
+   File: standardType.interface.php  (model/standardType.interface.php)
+   }  # Group: Model
+
+File: os  (os.class.php)
+File: proc  (proc.class.php)
+File: queue  (queue/queue.class.php)
+
+Group: Request  {
+
+   File: cookie  (request/cookie.class.php)
+   File: file  (request/file.class.php)
+   File: query  (request/query.class.php)
+   File: request  (request/request.class.php)
+   File: route  (request/route.class.php)
+   File: session  (request/session.class.php)
+   File: url  (request/url.class.php)
+   }  # Group: Request
+
+Group: Response  {
+
+   File: moved  (response/moved.class.php)
+   File: redirect  (response/redirect.class.php)
+   File: response  (response/response.class.php)
+   }  # Group: Response
+
+File: registry.class.php  (registry.class.php)
+File: sys  (sys.class.php)
+File: timer  (timer.class.php)
+File: utility  (utility.class.php)
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   File Index: Files
+   Function Index: Functions
+   Interface Index: Interfaces
+   Constant Index: Constants
+   }  # Group: Index
+
