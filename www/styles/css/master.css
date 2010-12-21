@@ -1,0 +1,278 @@
+@import url(reset.css);
+@import url(960.css);
+
+/* Structure */
+
+body {
+	background: #272727;
+	color: #fff;
+	font: bold 12px Helvetica;
+	text-transform: uppercase;
+}
+
+#header {
+	background: #f1f1f0;
+	height: 50px;
+	width: 100%;
+	margin: 0 0 30px 0;
+	}
+	
+#table_container {
+	display: none;
+}
+
+#footer {
+	text-align: center;
+	text-transform: none;
+	margin-top: 30px;
+	color: #1f1f1f;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.05);
+}
+	
+	/* Tabbed Navigation */
+	
+	.nav {
+		float: left;
+	}
+	
+		.nav li {
+			float: left;
+			margin-right: 20px;
+		}
+		
+			.nav li a {
+				display: block;
+				color: #515051;
+				text-decoration: none;
+				padding: 10px 0 0 0;
+				position: relative;
+			}
+			
+			.nav li:not(.active) a:hover {
+				text-decoration: underline;
+			}
+			
+			.nav li.active a {
+				color: #fff;
+				padding: 13px 15px 7px 15px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			
+			.nav li.active a:before {
+				content: url(../img/main_tab_left.png);
+				position: absolute;
+				left: -5px;
+				bottom: -3px;
+			}
+			
+			.nav li.active a:after {
+				content: url(../img/main_tab_right.png);
+				position: absolute;
+				right: -5px;
+				bottom: -3px;
+			}
+			
+			/* Main Nav */
+			
+			.nav#main {
+				margin-top: 17px;
+			}
+			
+			.nav#main li.active a {
+				background: #272727;
+			}
+			
+			
+			/* Graph Nav */
+			
+			.nav#graph {
+				margin: 30px 0 0 20px;
+			}
+			
+			.nav#graph li.active a {
+				background: #1f1f1f;
+			}
+			
+			.nav#graph li.active a:before {
+				content: url(../img/graph_tab_left.png);
+			}
+			
+			.nav#graph li.active a:after {
+				content: url(../img/graph_tab_right.png);
+			}
+			
+			/* User Actions Nav */
+			
+			/* User Actions */
+
+			.nav#user_actions {
+				margin-top: 10px;
+				float: right;
+			}
+			
+			#clock_in {
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+				padding: 7px 10px;
+				line-height: normal;
+				color: #fff;
+				text-transform: none;
+			}
+			
+
+/*
+#current_period {
+	margin: 30px 0 40px 0;
+	position: relative;
+	background: -webkit-gradient(linear, left top, left bottom, from(#131313), to(#151515), color-stop(1%, #2d2d2d), color-stop(2%, #131313));
+	background: -moz-linear-gradient(-90deg, #131313, #2d2d2d 1%, #131313 2%, #151515);
+	border: 1px solid #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 940px;
+}
+*/
+
+
+/* Lists */
+
+ul.dark_list li {
+	padding: 10px 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #1f1f1f;
+	margin-bottom: 10px;
+	text-transform: none;
+	font-size: 20px;
+}
+
+ul.dark_list li em {
+	float: right;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+
+/* Timer */
+
+#timer {
+	padding: 10px 15px;
+	float: right;
+	font-size: 30px;
+}
+
+	#timer em {
+		font-size: 12px;
+		display: block;
+		text-align: right;
+	}	
+
+	
+/* Graphs */
+
+canvas {
+
+	}
+
+#graph_container {
+	clear: both;
+	}
+	
+
+#graph_tabs li {
+	margin-right: 20px;
+	float: left;
+	position: relative;
+	}
+	
+	#graph_tabs li a {
+		display: block;
+		color: #515051;
+		text-decoration: none;
+		padding-top: 10px;
+	}
+	
+	#graph_tabs li.active a {
+		background: #1f1f1f;
+		color: #fff;
+		padding: 13px 15px 7px 15px;
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	
+	#graph_tabs li:not(.active) a:hover {
+		text-decoration: underline;
+	}
+			
+			#graph_tabs li.active a:before {
+				content: url(../img/graph_tab_left.png);
+				position: absolute;
+				left: -5px;
+				bottom: -3px;
+			}
+			
+			#graph_tabs li.active a:after {
+				content: url(../img/graph_tab_right.png);
+				position: absolute;
+				right: -5px;
+				bottom: -3px;
+			}
+	
+
+	
+			
+/* Misc Formatting */
+
+em {
+	color: #515051;
+	margin-right: 5px;
+}
+
+h1 {
+	text-transform: none;
+	font-size: 28px;
+	margin: 0 0 10px 0;
+}
+
+h2, table caption {
+	text-transform: none;
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+.dark {
+	background: #1f1f1f;
+}
+
+.round {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.green {
+	border: 1px solid #597854;
+	background: -webkit-gradient(linear, left top, left bottom, from(#95af91), to(#769471), color-stop(1%, rgba(255,255,255,0.5)), color-stop(2%, #95af91)) #769471;
+	background: -moz-linear-gradient(top, #95af91, rgba(255,255,255,0.5) 1%, #95af91 2%, #769471) #769471;
+}
+
+.red {
+	border: 1px solid #914e4e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#df7777), to(#ae5d5d), color-stop(1%, rgba(255,255,255,0.5)), color-stop(2%, #df7777)) #ae5d5d;
+	background: -moz-linear-gradient(top, #ae5d5d, rgba(255,255,255,0.5) 1%, #df7777 2%, #ae5d5d) #df7777;
+}
+		
