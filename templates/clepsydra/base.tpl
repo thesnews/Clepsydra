@@ -19,6 +19,13 @@
 		<div class="container_12">
 			{% block content %}{% endblock %}
 		</div>
+
+		<div class="grid_12">
+			<br style="clear:both;" />
+			<div  id="footer">
+				&copy; Copyright 2011 The State News
+			</div>
+		</div>
 	
 	</body>
 </html>
