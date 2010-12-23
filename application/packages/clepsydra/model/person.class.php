@@ -62,7 +62,7 @@ class person extends \foundry\model {
 			'order' => 'self:in desc',
 			'limit' => 100
 		)
-	)
+	);
 	
 	protected $schema = array(
 		'uid',

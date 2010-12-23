@@ -5,7 +5,7 @@
  Group: Middleware
  
  File: auth
-  Provides \admin\middleware\auth class
+  Provides \clepsydra\middleware\auth class
   
  Version:
   2010.06.24
@@ -22,7 +22,6 @@
 namespace clepsydra\middleware;
 use foundry\auth\utility as AuthUtil;
 use foundry\auth\session as AuthSession;
-use admin\lib\auth as AuthLib;
 use foundry\request\url as URL;
 use foundry\config as Conf;
 
@@ -31,7 +30,7 @@ use foundry\config as Conf;
   Admin package authentication middleware
  
  Namespace:
-  \admin\middleware
+  \clepsydra\middleware
 */
 class auth implements \foundry\middleware\middlewareInterface {
 
