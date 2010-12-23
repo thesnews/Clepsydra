@@ -53,16 +53,18 @@ class main extends \foundry\controller {
 	
 	/*
 	 Method: main
-	  <# description #>
+	  main action
 	 
 	 Access:
-	  <# public #>
+	  public
 	 
 	 Parameters:
-	  <# params #>
+	  _void_
 	 
 	 Returns:
-	  <# return value #>
+	  _array_
+	  
+	   - refer - _string_ refering url
 	*/
 	public function main() {
 			
@@ -71,6 +73,26 @@ class main extends \foundry\controller {
 		);
 	}
 	
+	/*
+	 Method: login
+	  Login action. Accepts via POST:
+	  
+	   - email - _string_
+	   - passwd - _string_
+	 
+	  Action will forward to next action if authentication is successful,
+	  otherwise it will return to the 'main' action with a 'message' and
+	  'status' in the GET params.
+	 
+	 Access:
+	  public
+	 
+	 Parameters:
+	  _void_
+	 
+	 Returns:
+	  _object_ - \foundry\response\redirect
+	*/
 	public function login() {
 	
 		$authSess = new \foundry\auth\session;
@@ -175,6 +197,19 @@ class main extends \foundry\controller {
 			
 	}
 
+	/*
+	 Method: logout
+	  Logs the user out and destroys the auth session
+	 
+	 Access:
+	  public
+	 
+	 Parameters:
+	  _void_
+	 
+	 Returns:
+	  _object_ - \foundry\response\redirect
+	*/
 	public function logout() {
 		$sess = new \foundry\auth\session;
 		$sess->verify();
