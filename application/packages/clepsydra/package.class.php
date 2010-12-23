@@ -49,6 +49,7 @@ class package {
 	public static function helpers() {
 		if( self::$myContext == 'primary' ) {
 			return array(
+				'userHelper' => '\\clepsydra\\helper\\user',
 			);
 		}
 		
