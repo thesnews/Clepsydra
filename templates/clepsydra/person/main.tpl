@@ -12,7 +12,7 @@
 			Your time isn't tracked.
 		{% endif %}
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		<em>Currently:</em> <span id="container_currentTime">00:00:00</span>
+		<em>Currently:</em> <span id="container_currentTime" data-url="{{ 'clepsydra:main/beat'|url }}">Fetching time</span>
 	</div>
 	<div class="grid_6">
 		<div id="timer" class="dark round">

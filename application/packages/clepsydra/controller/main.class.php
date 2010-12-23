@@ -229,6 +229,28 @@ class main extends \foundry\controller {
 		
 		return $resp;
 	}
+	
+	/*
+	 Method: beat
+	  Returns the current server timestamp. We can't rely on the client
+	  computer's time... people will be tricky.
+	 
+	 Access:
+	  public
+	 
+	 Parameters:
+	  _void_
+	 
+	 Returns:
+	  _array_
+	  
+	   - currently - _int_ timestamp
+	*/
+	public function beat() {
+		return array(
+			'currently' => time()
+		);
+	}
 
 
 }

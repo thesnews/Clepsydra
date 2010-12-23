@@ -2,7 +2,7 @@ window.addEvent('domready', function() {
 
 	// Initial Graph setup
 	
-	var graph = new Bluff.Line('thegraph', '940x300');
+/*	var graph = new Bluff.Line('thegraph', '940x300');
 	
 	graph.set_theme({
 		colors: ['#fff'],
@@ -31,7 +31,30 @@ window.addEvent('domready', function() {
 		this.getParent('li').addClass('active');
 		// TODO: Clear graph, get data from graph referenced in anchor's rel attr, redraw graph
 	});
-	
-	
+*/	
+
+	if( $('container_currentTime') ) {
+		var el = $('container_currentTime');
+
+		var uri = el.get('data-url').toURI();
+		uri.set('file', uri.get('file')+'.json');
+		
+		new Request.JSON({
+			url: uri,
+			method: "GET",
+			onComplete: function(data) {
+				var time = data[0].currently * 1000;
+				var date = new Date(time);
+				
+				el.set('text', date.format('%k:%M:%S'));
+				
+				setInterval(function() {
+					date.increment('second');
+					el.set('text', date.format('%k:%M:%S'));
+				}, 1000);
+			}
+		}).send();
+	}
+
 
 });
