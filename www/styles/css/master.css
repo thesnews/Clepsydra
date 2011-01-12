@@ -1,6 +1,32 @@
 @import url(reset.css);
 @import url(960.css);
 
+/* Animations */
+
+@-webkit-keyframes loginzoom {
+	from {
+		-webkit-transform: scale(0);
+		opacity: 0;
+		}
+	to {
+		-webkit-transform: scale(1);
+		opacity: 1;
+		}
+	}
+		
+form#login {
+	-webkit-animation-name: loginzoom;
+	-webkit-animation-duration: 0.75s;
+	-webkit-animation-iteration-count: 1;
+	}
+
+#rotate-skew-scale-translate {
+	transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+}
+
+
+
+
 /* Structure */
 
 body {
@@ -9,6 +35,10 @@ body {
 	font: bold 12px Helvetica;
 	text-transform: uppercase;
 }
+
+body#login_body {
+	background: #202020;
+	}
 
 #header {
 	background: #f1f1f0;
@@ -28,6 +58,64 @@ body {
 	color: #1f1f1f;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.05);
 }
+
+
+/* Login */
+
+#login {
+	background: #272727;
+	padding: 15px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.5);
+	width: 300px;
+	margin: 150px auto 0 auto;
+	-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 10px 10px 5px #888;
+}
+
+	#login p {
+		margin-top: 10px;
+		font-weight: normal;
+		text-transform: none;
+		color: rgba(0,0,0,0.7);
+		text-shadow: 0 1px 0 rgba(255,255,255,0.05);
+		}
+		
+		#login p strong {
+			font-weight: bold;
+		}
+		
+		#login p span {
+			display: block;
+			margin: 5px 0;
+		}
+		
+	#login #logo {
+		margin: 0 0 -15px 45px;
+		}
+
+	#login input:not([type=submit]) {
+		margin-right: 5px;
+		width: 80px;
+		background: rgba(0,0,0,0.2);
+		border: 1px solid rgba(0,0,0,0.2);
+		color: #fff;
+		padding: 10px;
+		font-size: 12px;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.05);
+		-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+		-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+		box-shadow: 10px 10px 5px #888;
+	}
+	
+	#login input[type=submit] {
+		display: inline;
+		font: bold 14px Helvetica;
+		padding: 10px 12px;
+		color: #fff;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	}
 	
 	/* Tabbed Navigation */
 	
@@ -265,9 +353,9 @@ h2, table caption {
 }
 
 .green {
-	border: 1px solid #597854;
-	background: -webkit-gradient(linear, left top, left bottom, from(#95af91), to(#769471), color-stop(1%, rgba(255,255,255,0.5)), color-stop(2%, #95af91)) #769471;
-	background: -moz-linear-gradient(top, #95af91, rgba(255,255,255,0.5) 1%, #95af91 2%, #769471) #769471;
+	border: 1px solid #192119;
+	background: -webkit-gradient(linear, left top, left bottom, from(#57765b), to(#3b4f3d), color-stop(1%, rgba(255,255,255,0.3)), color-stop(2%, #57765b)) #3b4f3d;
+	background: -moz-linear-gradient(top, #57765b, rgba(255,255,255,0.3) 1%, #57765b 2%, #3b4f3d) #3b4f3d;
 }
 
 .red {

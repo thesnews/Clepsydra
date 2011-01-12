@@ -4,10 +4,6 @@
 		<title>Clepsydra</title>	
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ 'styles/css/master.css'|url }}" />
 		<script type="text/javascript" src="{{ 'javascript/vendor.min.js'|url }}"></script>
-
-		<script type="text/javascript">
-
-		</script>
 		<script type="text/javascript" src="{{ 'javascript/master.js'|url }}"></script>
 	</head>
 	<body>
